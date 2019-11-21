@@ -7,6 +7,7 @@
 * [技术](part2/README.md)
   - [无限试用图床软件 iPic](part2/无限试用图床软件 iPic.md)
   - [Pod升级与Bundler](part2/Pod升级与Bundler.md)
+  - [Lean 的 OpenWRT Lede 固件编译](part2/Lean 的 OpenWRT Lede 固件编译.md)
 
 
 
