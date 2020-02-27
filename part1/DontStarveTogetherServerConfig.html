@@ -1,0 +1,500 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>饥荒服务器搭建指南 · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="../part2/" />
+    
+    
+    <link rel="prev" href="宝塔 BT 面板 + V2Ray：实现 Websocket+TLS+Nginx 分流.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    服务配置
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" data-path="宝塔 BT 面板 + V2Ray：实现 Websocket+TLS+Nginx 分流.html">
+            
+                <a href="宝塔 BT 面板 + V2Ray：实现 Websocket+TLS+Nginx 分流.html">
+            
+                    
+                    宝塔 BT 面板 + V2Ray：实现 Websocket+TLS+Nginx 分流
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.2.2" data-path="DontStarveTogetherServerConfig.html">
+            
+                <a href="DontStarveTogetherServerConfig.html">
+            
+                    
+                    饥荒服务器搭建指南
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="../part2/">
+            
+                <a href="../part2/">
+            
+                    
+                    技术
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" data-path="../part2/无限试用图床软件 iPic.html">
+            
+                <a href="../part2/无限试用图床软件 iPic.html">
+            
+                    
+                    无限试用图床软件 iPic
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2" data-path="../part2/Pod升级与Bundler.html">
+            
+                <a href="../part2/Pod升级与Bundler.html">
+            
+                    
+                    Pod升级与Bundler
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3" data-path="../part2/Lean 的 OpenWRT Lede 固件编译.html">
+            
+                <a href="../part2/Lean 的 OpenWRT Lede 固件编译.html">
+            
+                    
+                    Lean 的 OpenWRT Lede 固件编译
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.4" data-path="../part2/SedCommand.html">
+            
+                <a href="../part2/SedCommand.html">
+            
+                    
+                    Sed命令
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >饥荒服务器搭建指南</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="&#x9965;&#x8352;&#x670D;&#x52A1;&#x5668;&#x642D;&#x5EFA;&#x6307;&#x5357;">&#x9965;&#x8352;&#x670D;&#x52A1;&#x5668;&#x642D;&#x5EFA;&#x6307;&#x5357;</h1>
+<p><img src="http://sylarimage.oss-cn-shenzhen.aliyuncs.com/2020-02-27-033648.jpg" alt=""></p>
+<p>&#x6D4B;&#x8BD5;&#x73AF;&#x5883;: CentOS 7.6 64&#x4F4D;</p>
+<p>&#x73AF;&#x5883;&#x7684;&#x4F9D;&#x8D56;&#x662F;&#x57FA;&#x4E8E; 64 &#x4F4D;&#x7684;,32&#x4F4D;&#x4E0D;&#x9002;&#x5408;</p>
+<p>&#x53EF;&#x901A;&#x8FC7;&#x547D;&#x4EE4;&#x6765;&#x67E5;&#x770B;&#x7248;&#x672C;</p>
+<pre><code class="lang-shell">uname -r
+
+3.10.0-327.el7.x86_64   &#x6709;64&#x5C31;&#x662F;64&#x4F4D;
+</code></pre>
+<h1 id="1-&#x9996;&#x5148;&#x9700;&#x8981;&#x914D;&#x7F6E;&#x4F9D;&#x8D56;&#x73AF;&#x5883;">1. &#x9996;&#x5148;&#x9700;&#x8981;&#x914D;&#x7F6E;&#x4F9D;&#x8D56;&#x73AF;&#x5883;</h1>
+<pre><code class="lang-shell">sudo yum update
+sudo yum -y install glibc.i686 libstdc++.i686 libcurl4-gnutls-dev.i686 libcurl.i686 screen
+</code></pre>
+<h1 id="2-&#x5B89;&#x88C5;steamcmd-&#x670D;&#x52A1;&#x5668;&#x7EC4;&#x4EF6;">2. &#x5B89;&#x88C5;SteamCMD &#x670D;&#x52A1;&#x5668;&#x7EC4;&#x4EF6;</h1>
+<p><a href="https://developer.valvesoftware.com/wiki/SteamCMD:zh-cn" target="_blank">SteamCMD&#x5B98;&#x7F51;</a></p>
+<p>&#x901A;&#x5E38;&#x90FD;&#x662F;&#x624B;&#x52A8;&#x5B89;&#x88C5;SteamCMD</p>
+<pre><code class="lang-shell">cd /home &amp;&amp; mkdir steamcmd &amp;&amp; cd steamcmd
+
+#&#x5916;&#x56FD;&#x5730;&#x533A;&#x53EF;&#x4EE5;&#x7528;&#x8FD9;&#x4E2A;&#x4E0B;&#x8F7D;(2&#x9009;&#x4E00;)
+wget https://steamcdn-a.akamaihd.net/client/installer/steamcmd_linux.tar.gz
+
+#&#x4E2D;&#x56FD;&#x5730;&#x533A;&#x53EF;&#x4EE5;&#x7528;&#x8FD9;&#x4E2A;&#x4E0B;&#x8F7D;
+curl -sqL &quot;https://media.st.dl.bscstorage.net/client/installer/steamcmd_linux.tar.gz&quot; | tar zxvf -
+
+
+#&#x4E0B;&#x8F7D;&#x6210;&#x529F;&#x540E;&#x8FD0;&#x884C; SteamCMD
+./steamcmd.sh
+</code></pre>
+<p><img src="http://sylarimage.oss-cn-shenzhen.aliyuncs.com/2020-02-27-040133.jpg" alt=""></p>
+<p>&#x770B;&#x5230;&#x4E0A;&#x56FE;&#x5C31;&#x662F; SteamCMD &#x6253;&#x5F00;&#x6210;&#x529F;</p>
+<p>&#x63A5;&#x4E0B;&#x6765;&#x5728;Steam&gt; &#x4E0B;&#x8F93;&#x5165;&#x547D;&#x4EE4;(&#x4E0D;&#x9700;&#x8981;&#x8F93;&#x5165; Steam&gt; !!!!!!,&#x53EA;&#x9700;&#x8981;&#x8F93;&#x5165; Steam&gt; &#x540E;&#x9762;&#x5185;&#x5BB9;)</p>
+<pre><code class="lang-shell">Steam&gt; login anonymous
+Steam&gt; force_install_dir /home/dstserver
+Steam&gt; app_update 343050 validate
+</code></pre>
+<p>&#x7B2C;&#x4E00;&#x6761;&#xFF0C;&#x533F;&#x540D;&#x767B;&#x9646;SteamCMD</p>
+<p>&#x7B2C;&#x4E8C;&#x6761;,    &#x914D;&#x7F6E;&#x670D;&#x52A1;&#x7AEF;&#x4E0B;&#x8F7D;&#x8DEF;&#x5F84;&#x4E3A; &apos;/home/dstserver&apos;</p>
+<p>&#x7B2C;&#x4E09;&#x6761;,    &#x4E0B;&#x8F7D;&#x9965;&#x8352;&#x670D;&#x52A1;&#x5668;</p>
+<p>&#x4E4B;&#x540E;&#x670D;&#x52A1;&#x5668;&#x4F1A;&#x81EA;&#x5DF1;&#x4E0B;&#x8F7D;&#xFF0C;&#x7B49;&#x4E0B;&#x8F7D;&#x5B8C;&#x6210;&#x540E;
+&#x8F93;&#x5165;<code>quit</code>&#x9000;&#x51FA;<code>SteamCMD</code>&#x7A0B;&#x5E8F;
+&#x81F3;&#x6B64;&#x670D;&#x52A1;&#x5668;&#x4E0B;&#x8F7D;&#x5B89;&#x88C5;&#x5DF2;&#x7ECF;&#x5B8C;&#x6210;&#xFF0C;&#x53EF;&#x4EE5;&#x5F00;&#x59CB;&#x914D;&#x7F6E;&#x670D;&#x52A1;&#x5668;&#x4E86;&#xFF01;</p>
+<h1 id="3-&#x670D;&#x52A1;&#x5668;&#x914D;&#x7F6E;">3. &#x670D;&#x52A1;&#x5668;&#x914D;&#x7F6E;</h1>
+<p>&#x9996;&#x5148;&#x89E3;&#x51B3;&#x6700;&#x91CD;&#x8981;&#x7684;&#x95EE;&#x9898;&#xFF0C;linux&#x4E0B;&#x9965;&#x8352;&#x7684;&#x670D;&#x52A1;&#x5668;&#x4F3C;&#x4E4E;&#x9700;&#x8981;&#x7684;&#x7EC4;&#x4EF6;&#x8DDF;&#x73B0;&#x5728;&#x7684;&#x7EC4;&#x4EF6;&#x4EA7;&#x751F;&#x4E86;&#x540D;&#x5B57;&#x4E0A;&#x7684;&#x5DEE;&#x9519;
+&#x5BFC;&#x81F4;&#x542F;&#x52A8;&#x670D;&#x52A1;&#x5668;&#x4F1A;&#x663E;&#x793A;&#x7F3A;&#x5C11;&#x5173;&#x952E;&#x7684;&#x7EC4;&#x4EF6;<code>libcurl-gnutls.so.4</code>
+&#x56E0;&#x6B64;&#x9700;&#x8981;&#x6267;&#x884C;&#x4E0B;&#x9762;&#x7684;&#x547D;&#x4EE4;&#x6765;&#x89E3;&#x51B3;</p>
+<pre><code class="lang-shell">ln -s /usr/lib/libcurl.so.4 /home/dstserver/bin/lib32/libcurl-gnutls.so.4
+</code></pre>
+<p>&#x8FD9;&#x4E2A;&#x5751;&#x8E29;&#x4E86;&#x6211;&#x534A;&#x5929;&#x65F6;&#x95F4;</p>
+<p>&#x540E;&#x9762;&#x7684;&#x8DEF;&#x5F84;&#x9700;&#x8981;&#x6839;&#x636E;&#x4F60;&#x4E0A;&#x9762; <code>force_install_dir</code> &#x6765;&#x4FEE;&#x6539;&#xFF0C;&#x5982;&#x679C;&#x662F;&#x6309;&#x4E0A;&#x9762;&#x7684;&#x6587;&#x4EF6;&#x8DEF;&#x5F84;&#x8FD9;&#x6837;&#x586B;&#x5C31;&#x597D;&#x4E86;</p>
+<p>&#x4E0B;&#x8F7D;&#x5B8C;&#x6210;&#x540E;&#xFF0C;&#x8FDB;&#x5165; <code>dstserver</code> &#x6587;&#x4EF6;&#x5939;</p>
+<pre><code class="lang-shell">cd /home/dstserver/bin
+</code></pre>
+<p>&#x91CC;&#x9762;&#x6709;&#x4E2A; <code>dontstarve_dedicated_server_nullrenderer</code> &#x6587;&#x4EF6;&#xFF0C;&#x8FD9;&#x4E2A;&#x5C31;&#x662F;&#x670D;&#x52A1;&#x5668;&#x5F00;&#x542F;&#x7684;&#x5DE5;&#x5177;</p>
+<p>&#x9965;&#x8352;&#x5BA2;&#x6237;&#x7AEF;&#x7684;&#x5B58;&#x6863;&#x4F4D;&#x7F6E;&#x5982;&#x4E0B;&#xFF1A;</p>
+<pre><code class="lang-shell"># Windows
+Documents\Klei\DoNotStarveTogether
+# Linux
+~/.klei/DoNotStarveTogether
+# MacOS
+~/Documents/Klei/DoNotStarveTogether
+</code></pre>
+<p>&#x8FD9;&#x4E2A;&#x7A0B;&#x5E8F;&#x8FD8;&#x662F;&#x6709;&#x5176;&#x4ED6;&#x7684;&#x542F;&#x52A8;&#x53C2;&#x6570;&#x7684;&#x3002;&#x4E3B;&#x8981;&#x53C2;&#x6570;&#x5982;&#x4E0B;&#xFF1A;</p>
+<table>
+<thead>
+<tr>
+<th>&#x53C2;&#x6570;</th>
+<th>&#x7528;&#x6CD5;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>-persistent_storage_root</td>
+<td>&#x6307;&#x5B9A;&#x5B58;&#x6863;&#x6839;&#x76EE;&#x5F55;&#x7684;&#x4F4D;&#x7F6E;&#xFF0C;&#x5FC5;&#x987B;&#x662F;&#x7EDD;&#x5BF9;&#x76EE;&#x5F55;&#x3002;&#x9ED8;&#x8BA4;&#x4E3A; <code>~/.klei</code>&#x3002;</td>
+</tr>
+<tr>
+<td>-conf_dir</td>
+<td>&#x6307;&#x5B9A;&#x914D;&#x7F6E;&#x6587;&#x4EF6;&#x7684;&#x76EE;&#x5F55;&#x540D;&#x3002;&#x9ED8;&#x8BA4;&#x4E3A; <code>DoNotStarveTogether</code>&#xFF0C;&#x548C;&#x4E0A;&#x4E00;&#x4E2A;&#x53C2;&#x6570;&#x62FC;&#x5728;&#x4E00;&#x8D77;&#x5C31;&#x662F;&#x4F60;&#x5B58;&#x6863;&#x7684;&#x5B8C;&#x6574;&#x4F4D;&#x7F6E;&#x4E86;&#xFF0C;&#x9ED8;&#x8BA4;&#x4E3A; <code>~/.klei/DoNotStarveTogether</code>&#xFF0C;&#x6240;&#x6709;&#x7684;&#x5B58;&#x6863;&#x90FD;&#x5728;&#x8FD9;&#x91CC;&#x3002;</td>
+</tr>
+<tr>
+<td>-cluster</td>
+<td>&#x6307;&#x5B9A;&#x542F;&#x52A8;&#x7684;&#x4E16;&#x754C;&#xFF0C;&#x9ED8;&#x8BA4;&#x4E3A; <code>Cluster_1</code>&#x3002;&#x670D;&#x52A1;&#x7AEF;&#x542F;&#x52A8;&#x65F6;&#x4F1A;&#x53BB;&#x627E; <code>//</code>&#x76EE;&#x5F55;&#x4E0B;&#x7684; <code>cluster.ini</code> &#x8FD9;&#x4E2A;&#x914D;&#x7F6E;&#x6587;&#x4EF6;&#xFF0C;&#x4F60;&#x7684;&#x4E16;&#x754C;&#x540D;&#x79F0;&#x3001;&#x5BC6;&#x7801;&#x3001;&#x6E38;&#x620F;&#x6A21;&#x5F0F;&#x4E4B;&#x7C7B;&#x7684;&#x90FD;&#x662F;&#x5728;&#x8FD9;&#x91CC;&#x914D;&#x7F6E;&#x7684;&#xFF08;&#x7F51;&#x4E0A;&#x6709;&#x4E9B;&#x6559;&#x7A0B;&#x91CC;&#x7528;&#x7684; <code>setting.ini</code>&#xFF0C;&#x90A3;&#x4E2A;&#x662F;&#x65E7;&#x7248;&#x7684;&#xFF09;&#x3002;&#x540C;&#x7406;&#xFF0C;&#x4F60;&#x7684;&#x5B58;&#x6863;&#x6587;&#x4EF6;&#x5939;&#x4E5F;&#x53EF;&#x4EE5;&#x4E0D;&#x4F7F;&#x7528;&#x7C7B;&#x4F3C; <code>Cluster_X</code> &#x7684;&#x540D;&#x5B57;&#xFF0C;&#x6539;&#x6210;&#x5176;&#x4ED6;&#x4EC0;&#x4E48;&#x4E71;&#x4E03;&#x516B;&#x7CDF;&#x7684;&#x90FD;&#x53EF;&#x4EE5;&#xFF0C;&#x53EA;&#x8981;&#x542F;&#x52A8;&#x65F6;&#x6307;&#x5B9A;&#x672C;&#x53C2;&#x6570;&#x5C31;&#x884C;&#x4E86;&#x3002;</td>
+</tr>
+<tr>
+<td>-shard</td>
+<td>&#x9ED8;&#x8BA4;&#x4E3A; <code>Master</code>&#xFF0C;&#x542F;&#x52A8;&#x65F6;&#x5C06;&#x6B64;&#x53C2;&#x6570;&#x6307;&#x5B9A;&#x4E3A; <code>Cave</code> &#x5C31;&#x53EF;&#x4EE5;&#x542F;&#x52A8;&#x6D1E;&#x7A74;&#x670D;&#x52A1;&#x5668;&#x3002;</td>
+</tr>
+</tbody>
+</table>
+<p>&#x5176;&#x4ED6;&#x7684;&#x53C2;&#x6570;&#x6211;&#x5C31;&#x4E0D;&#x4E00;&#x4E00;&#x8BF4;&#x660E;&#x4E86;&#xFF0C;&#x5177;&#x4F53;&#x7684;&#x53C2;&#x6570;&#x5217;&#x8868;&#x53EF;&#x4EE5;&#x5728;<a href="http://forums.kleientertainment.com/topic/64743-dedicated-server-command-line-options-guide/" target="_blank">&#x8FD9;&#x91CC;</a>&#x67E5;&#x770B;&#x3002;&#x4E3E;&#x4E2A;&#x6817;&#x5B50;&#xFF1A;</p>
+<pre><code class="lang-shell"># &#x540C;&#x65F6;&#x542F;&#x52A8;&#x4E3B;&#x4E16;&#x754C;&#x670D;&#x52A1;&#x5668;&#x548C;&#x6D1E;&#x7A74;&#x670D;&#x52A1;&#x5668;
+./dontstarve_dedicated_server_nullrenderer -console -cluster MyClusterName -shard Master
+./dontstarve_dedicated_server_nullrenderer -console -cluster MyClusterName -shard Caves
+</code></pre>
+<p>&#x7531;&#x4E8E;&#x547D;&#x4EE4;&#x592A;&#x957F;&#x4E0D;&#x597D;&#x8BB0;&#xFF0C;&#x6211;&#x4EEC;&#x5F04;&#x6210;&#x4E24;&#x4E2A;&#x811A;&#x672C;&#x6765;&#x65B9;&#x4FBF;&#x542F;&#x52A8;</p>
+<pre><code class="lang-shell">echo &quot;./dontstarve_dedicated_server_nullrenderer -console -persistent_storage_root /home/dstsave -conf_dir dst -cluster World1 -shard Master&quot; &gt; master_start.sh
+echo &quot;./dontstarve_dedicated_server_nullrenderer -console -persistent_storage_root /home/dstsave -conf_dir dst -cluster World1 -shard Caves&quot; &gt; cave_start.sh
+
+chmod +x master_start.sh cave_start.sh
+</code></pre>
+<p><strong>&#x6CE8;&#x610F;:</strong>  &#x4E0A;&#x9762;&#x7684; <code>World1</code> &#x662F;&#x5B58;&#x6863;&#x540D;&#x5B57;&#xFF0C;&#x5982;&#x679C;&#x4F60;&#x6CA1;&#x653E;&#x5B58;&#x6863;&#x5230; <code>/home/dstsave</code> &#x4E0B;&#xFF0C;&#x4ED6;&#x4F1A;&#x81EA;&#x52A8;&#x5E2E;&#x4F60;&#x751F;&#x6210;&#x4E00;&#x4E2A;&#x9ED8;&#x8BA4;&#x7684; &#x540D;&#x5B57;&#x53EB;<code>World1</code> &#x65F6;&#x95F4;&#xFF0C;&#x53C2;&#x6570;&#x90FD;&#x662F;&#x9ED8;&#x8BA4;&#x7684;</p>
+<p>&#x5982;&#x679C;&#x4F60;&#x672C;&#x5730;&#x6709;&#x5B58;&#x6863;&#x60F3;&#x653E;&#x4E0A;&#x53BB;&#x670D;&#x52A1;&#x5668;&#x73A9;&#xFF0C;&#x53EA;&#x9700;&#x8981;&#x5427;&#x5B58;&#x6863;&#x4E0A;&#x4F20;&#x81F3; <code>/home/dstsave</code> &#x4E0B;&#xFF0C;&#x7136;&#x540E;&#x4FEE;&#x6539;&#x811A;&#x672C;&#x4E2D;  <code>-cluster World1</code>  &#x547D;&#x4EE4;&#x4E2D; <code>World1</code> &#x8FD9;&#x4E2A;&#x540D;&#x5B57;&#x4E3A;&#x4F60;&#x7684;&#x5B58;&#x6863;&#x540D;&#x5B57; &#xFF0C;&#x4F8B;&#x5982; <code>Cluster_1</code>&#x4E4B;&#x7C7B;&#x7684;, &#x6CE8;&#x610F;&#x662F;2&#x4E2A;&#x6587;&#x4EF6;&#x90FD;&#x8981;&#x6539; <code>master_start.sh</code> &#x4E0E; <code>cave_start.sh</code></p>
+<h1 id="4-&#x670D;&#x52A1;&#x5668;token&#x914D;&#x7F6E;">4. &#x670D;&#x52A1;&#x5668;Token&#x914D;&#x7F6E;</h1>
+<p>&#x9996;&#x5148;&#x53BB; <strong><a href="https://accounts.klei.com/account/game/servers?game=DontStarveTogether" target="_blank">Keli&#x8D26;&#x6237;&#x9875;&#x9762;</a></strong>
+&#x767B;&#x9646;&#x4F60;&#x7684;Steam&#x8D26;&#x53F7;&#x53BB;&#x751F;&#x6210;&#x670D;&#x52A1;&#x5668;&#x542F;&#x52A8;&#x5BC6;&#x94A5;<strong>(&#x521D;&#x6B21;&#x767B;&#x9646;&#x53EF;&#x80FD;&#x9875;&#x9762;&#x6CA1;&#x8DF3;&#x8F6C;&#xFF0C;&#x90A3;&#x5C31;&#x518D;&#x70B9;&#x51FB;&#x4E00;&#x6B21;&#x8BE5;&#x94FE;&#x63A5;&#x5C31;&#x53EF;&#x4EE5;&#x770B;&#x5230;&#x3002;&#x53EF;&#x80FD;&#x9700;&#x8981;&#x79D1;&#x5B66;&#x4E0A;&#x7F51;&#xFF0C;&#x8981;&#x4E0D;&#x7136;&#x6216;&#x8BB8;&#x4F1A;&#x5F88;&#x6162;)</strong>&#x3002;</p>
+<p><img src="http://sylarimage.oss-cn-shenzhen.aliyuncs.com/2020-02-27-042415.png" alt=""></p>
+<p>&#x65B0;&#x5EFA;&#x670D;&#x52A1;&#x5668;&#xFF0C;&#x65B0;&#x5EFA;&#x540E;&#x4E0A;&#x9762;&#x5C31;&#x6709;&#x4F60;&#x7684;&#x670D;&#x52A1;&#x5668;&#x663E;&#x793A;&#x4EE5;&#x53CA;&#x4F60;&#x7684; <code>Token</code></p>
+<pre><code class="lang-shell">$ tree
+.
+&#x251C;&#x2500;&#x2500; Caves # &#x5982;&#x679C;&#x4F60;&#x60F3;&#x8981;&#x5F00;&#x6D1E;&#x7A74;&#x7684;&#x8BDD;
+&#x2502;   &#x2514;&#x2500;&#x2500; server.ini
+&#x251C;&#x2500;&#x2500; cluster.ini                            &lt;--------- &#x6E38;&#x620F;&#x6A21;&#x5F0F;&#x7684;&#x914D;&#x7F6E;&#xFF0C;&#x6CA1;&#x6709;&#x7684;&#x8BDD;&#x81EA;&#x5DF1;&#x521B;&#x5EFA;
+&#x251C;&#x2500;&#x2500; cluster_token.txt       &lt;--------- &#x9700;&#x8981;&#x5427;Token&#x653E;&#x5230;&#x586B;&#x5230;&#x8FD9;&#x4E2A;&#x6587;&#x4EF6;&#x91CC;&#xFF0C;&#x6CA1;&#x6709;&#x7684;&#x8BDD;&#x81EA;&#x5DF1;&#x521B;&#x5EFA;
+&#x2514;&#x2500;&#x2500; Master
+    &#x251C;&#x2500;&#x2500; modoverrides.lua
+    &#x2514;&#x2500;&#x2500; server.ini
+</code></pre>
+<p>&#x901A;&#x5E38;&#x5B58;&#x6863;&#x5C31;&#x7C7B;&#x4F3C;&#x4E0A;&#x9762;&#x6587;&#x4EF6;&#x7ED3;&#x6784;&#xFF0C;Token&#x6309;&#x4E0A;&#x9762;&#x6240;&#x8BF4;&#xFF0C;&#x586B;&#x5230;&#x76F8;&#x5E94;&#x6587;&#x4EF6;&#xFF0C;&#x6CE8;&#x610F;&#x8FD9;&#x4E2A;Token&#x6587;&#x4EF6;&#x4E0E; <code>Caves</code> , <code>Master</code> &#x540C;&#x4E00;&#x7EA7;&#x8DEF;&#x5F84;,&#x4E0D;&#x8981;&#x653E;&#x9519;&#x4F4D;&#x7F6E;</p>
+<h1 id="5-mod&#x914D;&#x7F6E;">5. Mod&#x914D;&#x7F6E;</h1>
+<p>&#x914D;&#x7F6E;&#x670D;&#x52A1;&#x5668;&#x9700;&#x8981;&#x4E0B;&#x8F7D;&#x7684;Mod</p>
+<p>&#x6253;&#x5F00;&#x9965;&#x8352;&#x670D;&#x52A1;&#x5668;&#x6587;&#x4EF6;&#x5939;,&#x5982;&#x4E0A;&#x9762;&#x6240;&#x8BF4;&#x7684; <code>force_install_dir</code> &#x6587;&#x4EF6;&#x5939;,&#x6253;&#x5F00; <code>mods</code>&#x6587;&#x4EF6;&#x5939;</p>
+<p><code>/home/dstserver/mods</code></p>
+<p>&#x6253;&#x5F00; <code>dedicated_server_mods_setup.lua</code> &#x6587;&#x4EF6;&#xFF0C;&#x6DFB;&#x52A0;&#x5982;&#x4E0B;&#x5185;&#x5BB9;&#xFF1A;</p>
+<pre><code class="lang-lua"><span class="hljs-comment">-- xxx &#x662F;&#x793E;&#x533A;workshop &#x7684;modid</span>
+ServerModSetup(<span class="hljs-string">&quot;xxx&quot;</span>)
+</code></pre>
+<p>&#x8FD9;&#x91CC;&#x6CE8;&#x610F;&#x7684;&#x662F;&#xFF0C;&#x8FD9;&#x4E2A;mod &#x53EA;&#x80FD;&#x662F;&#x793E;&#x533A;&#x91CC;&#x9762;&#x7684; <code>server_only_mod</code> &#xFF0C;&#x53EA;&#x80FD;&#x7528;&#x4E8E;&#x670D;&#x52A1;&#x5668;&#x7684;mod,&#x5BA2;&#x6237;&#x7AEF;&#x7684;mod&#x8FD9;&#x91CC;&#x6CA1;&#x7528;</p>
+<p>&#x5728;&#x5B58;&#x6863; Master &#x548C; Caves &#x4E0B;&#x9700;&#x8981;&#x914D;&#x7F6E;Mod&#x7684;&#xFF0C;&#x9700;&#x8981;&#x91CD;&#x5199;  <code>modoverrides.lua</code> &#x8FD9;&#x4E2A;&#x6587;&#x4EF6;&#xFF0C;&#x5982;&#x679C;&#x6CA1;&#x6709;&#x9700;&#x8981;&#x65B0;&#x5EFA;&#xFF0C;&#x6CE8;&#x610F;&#x662F;Master&#x548C;Caves&#x90FD;&#x9700;&#x8981;&#x8FD9;&#x4E2A;&#x6587;&#x4EF6;&#xFF0C;&#x56E0;&#x4E3A;&#x5206;&#x4E86;&#x4E24;&#x4E2A;&#x4E16;&#x754C;,&#x6253;&#x5F00; <code>modoverrides.lua</code></p>
+<pre><code class="lang-lua"><span class="hljs-keyword">return</span> {
+  [<span class="hljs-string">&quot;workshop-xxx&quot;</span>]={ configuration_options={  }, enabled=<span class="hljs-keyword">true</span> },
+}
+</code></pre>
+<p>&#x8FD9;&#x4E2A; <code>xxx</code> &#x5C31;&#x662F;&#x4E0A;&#x9762;  <code>dedicated_server_mods_setup.lu</code> &#x7684; <code>xxx</code>mod</p>
+<h1 id="6-&#x5F00;&#x542F;&#x6E38;&#x620F;">6. &#x5F00;&#x542F;&#x6E38;&#x620F;</h1>
+<p>&#x4E0A;&#x9762;&#x6240;&#x6709;&#x4E1C;&#x897F;&#x914D;&#x7F6E;&#x5B8C;&#x6210;&#x540E;&#x5C31;&#x80FD;&#x5F00;&#x6E38;&#x620F;&#x4E86;</p>
+<p>&#x5230;&#x8FD9;&#x4E00;&#x6B65;&#xFF0C;&#x8FD9;&#x4E2A;&#x670D;&#x52A1;&#x5668;&#x5C31;&#x53EF;&#x4EE5;&#x5F7B;&#x5E95;&#x5F00;&#x59CB;&#x73A9;&#x5566;&#xFF01;</p>
+<p>&#x8F93;&#x5165;&#x547D;&#x4EE4;</p>
+<pre><code class="lang-shell">cd /home/dstserver/bin
+screen -S master
+</code></pre>
+<p>&#x4E4B;&#x540E;&#x4F1A;&#x8FDB;&#x5165;&#x540D;&#x53EB;<code>master</code>&#x7684;&#x63A7;&#x5236;&#x53F0;&#x8F93;&#x5165;&#x754C;&#x9762;
+&#x6267;&#x884C;<code>./master_start.sh</code>&#x5373;&#x53EF;&#x5F00;&#x542F;&#x4E3B;&#x4E16;&#x754C;&#x670D;&#x52A1;&#x5668;
+&#x6309;&#x4E0B;<code>Ctrl A</code>&#x7136;&#x540E;&#x6309;&#x4E0B;<code>Ctrl D</code>&#x5373;&#x53EF;&#x56DE;&#x5230;&#x521D;&#x59CB;&#x63A7;&#x5236;&#x53F0;
+&#x518D;&#x6B21;&#x8F93;&#x5165;<code>screen -S cave</code>
+&#x5E76;&#x6267;&#x884C;<code>./cave_start.sh</code>&#x5373;&#x53EF;&#x5F00;&#x542F;&#x6D1E;&#x7A74;&#x670D;&#x52A1;&#x5668;
+&#x6309;&#x4E0B;<code>Ctrl A</code>&#x7136;&#x540E;&#x6309;&#x4E0B;<code>Ctrl D</code>&#x56DE;&#x5230;&#x521D;&#x59CB;&#x63A7;&#x5236;&#x53F0;</p>
+<p>&#x5982;&#x679C;&#x8981;&#x5173;&#x95ED;&#x670D;&#x52A1;&#x5668;&#x5219;&#x5148;&#x8F93;&#x5165;<code>screen -r master</code>&#x8FDB;&#x5165;&#x4E3B;&#x4E16;&#x754C;&#x670D;&#x52A1;&#x5668;&#x63A7;&#x5236;&#x53F0;&#x7136;&#x540E;&#x6309;&#x4E0B;<code>Ctrl C</code>&#x5173;&#x95ED;
+&#x6D1E;&#x7A74;&#x670D;&#x52A1;&#x5668;&#x5219;&#x8F93;&#x5165;<code>screen -r cave</code>&#x8FDB;&#x5165;&#x6D1E;&#x7A74;&#x670D;&#x52A1;&#x5668;&#x63A7;&#x5236;&#x53F0;&#x7136;&#x540E;&#x6309;&#x4E0B;<code>Ctrl C</code>&#x5173;&#x95ED;</p>
+<p>&#x5982;&#x679C;&#x91CD;&#x65B0;&#x767B;&#x5F55;&#x670D;&#x52A1;&#x5668; -r &#x4E0D;&#x4E86;&#xFF0C;&#x9700;&#x8981;&#x5148; <code>screen -d xxx</code> , <code>xxx</code> &#x5C31;&#x662F;&#x8FD9;&#x4E2A;screen&#x7684;&#x540D;&#x5B57;,&#x7136;&#x540E;&#x518D; <code>screen -r xxx</code> &#x5373;&#x53EF;</p>
+<p>&#x6CE8;&#x610F;&#x7684;&#x662F;&#x670D;&#x52A1;&#x5668;&#x9632;&#x706B;&#x5899;&#x9700;&#x8981;&#x5F00;&#x653E;</p>
+<p>&#x68EE;&#x6797;&#x670D;&#x52A1;&#x5668;&#x9ED8;&#x8BA4;&#x7AEF;&#x53E3; 10999</p>
+<p>&#x6D1E;&#x7A74;&#x670D;&#x52A1;&#x5668;&#x9ED8;&#x8BA4;&#x7AEF;&#x53E3; 10998</p>
+<p>&#x5982;&#x679C;&#x4FEE;&#x6539;&#x8FC7;&#x7684;&#x8BDD;&#x9700;&#x8981;&#x5F00;&#x542F;&#x6307;&#x5B9A;&#x7684;&#x7AEF;&#x53E3;</p>
+<h2 id="reference">Reference:</h2>
+<p><a href="https://www.feathersh1ne.com/archives/58/" target="_blank">Linux&#x73AF;&#x5883;&#x9965;&#x8352;&#x670D;&#x52A1;&#x5668;&#x624B;&#x52A8;&#x642D;&#x5EFA;&#x6559;&#x7A0B;</a></p>
+<p><a href="https://printempw.github.io/deploy-dont-starve-together-dedicated-server/" target="_blank">&#x9965;&#x8352;&#x8054;&#x673A;&#x7248;&#x72EC;&#x7ACB;&#x670D;&#x52A1;&#x5668;&#x642D;&#x5EFA;&#x8E29;&#x5751;&#x8BB0;&#x5F55;</a></p>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="宝塔 BT 面板 + V2Ray：实现 Websocket+TLS+Nginx 分流.html" class="navigation navigation-prev " aria-label="Previous page: 宝塔 BT 面板 + V2Ray：实现 Websocket+TLS+Nginx 分流">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="../part2/" class="navigation navigation-next " aria-label="Next page: 技术">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"饥荒服务器搭建指南","level":"1.2.2","depth":2,"next":{"title":"技术","level":"1.3","depth":1,"path":"part2/README.md","ref":"part2/README.md","articles":[{"title":"无限试用图床软件 iPic","level":"1.3.1","depth":2,"path":"part2/无限试用图床软件 iPic.md","ref":"part2/无限试用图床软件 iPic.md","articles":[]},{"title":"Pod升级与Bundler","level":"1.3.2","depth":2,"path":"part2/Pod升级与Bundler.md","ref":"part2/Pod升级与Bundler.md","articles":[]},{"title":"Lean 的 OpenWRT Lede 固件编译","level":"1.3.3","depth":2,"path":"part2/Lean 的 OpenWRT Lede 固件编译.md","ref":"part2/Lean 的 OpenWRT Lede 固件编译.md","articles":[]},{"title":"Sed命令","level":"1.3.4","depth":2,"path":"part2/SedCommand.md","ref":"part2/SedCommand.md","articles":[]}]},"previous":{"title":"宝塔 BT 面板 + V2Ray：实现 Websocket+TLS+Nginx 分流","level":"1.2.1","depth":2,"path":"part1/宝塔 BT 面板 + V2Ray：实现 Websocket+TLS+Nginx 分流.md","ref":"part1/宝塔 BT 面板 + V2Ray：实现 Websocket+TLS+Nginx 分流.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"part1/DontStarveTogetherServerConfig.md","mtime":"2020-02-27T04:55:11.543Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-02-27T04:55:52.841Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+
