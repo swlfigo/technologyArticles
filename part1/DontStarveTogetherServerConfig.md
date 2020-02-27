@@ -231,9 +231,11 @@ screen -S master
 
 
 
+## Reference:
 
+[Linux环境饥荒服务器手动搭建教程](https://www.feathersh1ne.com/archives/58/)
 
-
+[饥荒联机版独立服务器搭建踩坑记录](https://printempw.github.io/deploy-dont-starve-together-dedicated-server/)
 
 
 
