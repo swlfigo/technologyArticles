@@ -10,6 +10,7 @@
   - [Pod升级与Bundler](part2/Pod升级与Bundler.md)
   - [Lean 的 OpenWRT Lede 固件编译](part2/Lean 的 OpenWRT Lede 固件编译.md)
   - [Sed命令](part2/SedCommand.md)
+  - [阿里云DDNS更新 Python3](part2/AliyunDDNS.md)
 
 
 
